@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人网站</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: #50b3a2;
+            color: white;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+        header h1 {
+            text-align: center;
+        }
+        .photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            display: block;
+            margin: 20px auto;
+            object-fit: cover;
+        }
+        .resume {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .pdf-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #e8491d;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .pdf-link:hover {
+            background-color: #ff5a2c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>我的名字</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <img src="A54619592_证件照.jpg" alt="我的照片" class="photo">
+        
+        <div class="resume">
+            <h2>个人简介</h2>
+            <p>在这里添加一段简短的个人介绍，突出您的主要技能和经验...</p>
+            
+            <h3>核心能力</h3>
+            <ul>
+                <li>技能1</li>
+                <li>技能2</li>
+                <li>技能3</li>
+            </ul>
+
+            <a href=""KooBengHe_Resume.pdf"" class="pdf-link" target="_blank">查看完整简历 (PDF)</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('网页加载完成!');
+        });
+    </script>
+</body>
+</html>
