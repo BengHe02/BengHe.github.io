@@ -1,131 +1,135 @@
-import React, { useState } from 'react';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beng He Koo - Data Analyst Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.22.20/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/recharts/2.8.0/Recharts.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="root"></div>
 
-const skillsData = [
-  { name: 'Python', value: 85 },
-  { name: 'MySQL', value: 80 },
-  { name: 'Power BI', value: 75 },
-  { name: 'Data Analysis', value: 85 },
-  { name: 'Machine Learning', value: 70 },
-];
+    <script type="text/babel">
+        const { useState } = React;
+        const { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } = Recharts;
 
-const projectsData = [
-  {
-    title: "Final Year Research Project",
-    description: "Conducted research on \"The Impact of Internet Influencer's Evaluation on Consumer Satisfaction.\" Analyzed data to identify trends and insights, showcasing strong research and analytical skills."
-  },
-  {
-    title: "Data Analyst Internship",
-    description: "At TRS INFORMATION TECHNOLOGY Co Ltd, I filtered and cleaned data, analyzed trends, and created visualizations using BI tools, improving data accuracy and management engagement."
-  }
-];
+        const skillsData = [
+            { name: 'Python', value: 85 },
+            { name: 'MySQL', value: 80 },
+            { name: 'Power BI', value: 75 },
+            { name: 'Data Analysis', value: 85 },
+            { name: 'Machine Learning', value: 70 },
+        ];
 
-const Portfolio = () => {
-  const [currentProject, setCurrentProject] = useState(0);
+        const projectsData = [
+            {
+                title: "Final Year Research Project",
+                description: "Conducted research on \"The Impact of Internet Influencer's Evaluation on Consumer Satisfaction.\" Analyzed data to identify trends and insights, showcasing strong research and analytical skills."
+            },
+            {
+                title: "Data Analyst Internship",
+                description: "At TRS INFORMATION TECHNOLOGY Co Ltd, I filtered and cleaned data, analyzed trends, and created visualizations using BI tools, improving data accuracy and management engagement."
+            }
+        ];
 
-  const nextProject = () => {
-    setCurrentProject((prev) => (prev + 1) % projectsData.length);
-  };
+        const Portfolio = () => {
+            const [currentProject, setCurrentProject] = useState(0);
 
-  const prevProject = () => {
-    setCurrentProject((prev) => (prev - 1 + projectsData.length) % projectsData.length);
-  };
+            const nextProject = () => {
+                setCurrentProject((prev) => (prev + 1) % projectsData.length);
+            };
 
-  return (
-    <div className="min-h-screen bg-blue-50 p-8">
-      <header className="max-w-4xl mx-auto mb-12 text-center">
-        <h1 className="text-4xl font-bold mb-4 text-blue-800">Beng He Koo</h1>
-        <p className="text-xl text-blue-600">Fresh Graduate | Big Data Management and Application</p>
-      </header>
+            const prevProject = () => {
+                setCurrentProject((prev) => (prev - 1 + projectsData.length) % projectsData.length);
+            };
 
-      <main className="max-w-4xl mx-auto">
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4 text-blue-700">About Me</h2>
-          <p className="text-blue-900">
-            As an enthusiastic and highly motivated fresh graduate with a degree in Big Data from Xi'an Jiaotong University, 
-            I am passionate about diving deep into data to uncover insights that drive business growth and profitability. 
-            With a strong foundation in data analysis, Python programming, and machine learning, I aspire to become a data 
-            scientist who effectively utilizes data to make impactful business decisions.
-          </p>
-        </section>
+            return (
+                <div className="min-h-screen bg-blue-50 p-8">
+                    <header className="max-w-4xl mx-auto mb-12 text-center">
+                        <h1 className="text-4xl font-bold mb-4 text-blue-800">Beng He Koo</h1>
+                        <p className="text-xl text-blue-600">Fresh Graduate | Big Data Management and Application</p>
+                    </header>
 
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4 text-blue-700">Skills</h2>
-          <div className="h-40">
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={skillsData} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-                <XAxis type="number" hide />
-                <YAxis dataKey="name" type="category" width={100} />
-                <Tooltip />
-                <Bar dataKey="value" fill="#3b82f6" />
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
-        </section>
+                    <main className="max-w-4xl mx-auto">
+                        <section className="mb-12">
+                            <h2 className="text-2xl font-semibold mb-4 text-blue-700">About Me</h2>
+                            <p className="text-blue-900">
+                                As an enthusiastic and highly motivated fresh graduate with a degree in Big Data from Xi'an Jiaotong University, 
+                                I am passionate about diving deep into data to uncover insights that drive business growth and profitability. 
+                                With a strong foundation in data analysis, Python programming, and machine learning, I aspire to become a data 
+                                scientist who effectively utilizes data to make impactful business decisions.
+                            </p>
+                        </section>
 
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4 text-blue-700">Projects & Experience</h2>
-          <div className="relative">
-            <Card className="bg-blue-100 border-blue-300">
-              <CardHeader>
-                <CardTitle className="text-blue-800">{projectsData[currentProject].title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-blue-900 mb-4">{projectsData[currentProject].description}</p>
-                <Button variant="outline" className="text-blue-600 border-blue-600 hover:bg-blue-200">
-                  View Details <ExternalLink className="ml-2 h-4 w-4" />
-                </Button>
-              </CardContent>
-            </Card>
-            <Button 
-              variant="outline" 
-              className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1/2 bg-blue-100 text-blue-600 border-blue-300 hover:bg-blue-200"
-              onClick={prevProject}
-            >
-              <ChevronLeft className="h-4 w-4" />
-            </Button>
-            <Button 
-              variant="outline" 
-              className="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1/2 bg-blue-100 text-blue-600 border-blue-300 hover:bg-blue-200"
-              onClick={nextProject}
-            >
-              <ChevronRight className="h-4 w-4" />
-            </Button>
-          </div>
-        </section>
+                        <section className="mb-12">
+                            <h2 className="text-2xl font-semibold mb-4 text-blue-700">Skills</h2>
+                            <div className="h-40">
+                                <ResponsiveContainer width="100%" height="100%">
+                                    <BarChart data={skillsData} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+                                        <XAxis type="number" hide />
+                                        <YAxis dataKey="name" type="category" width={100} />
+                                        <Tooltip />
+                                        <Bar dataKey="value" fill="#3b82f6" />
+                                    </BarChart>
+                                </ResponsiveContainer>
+                            </div>
+                        </section>
 
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4 text-blue-700">Education</h2>
-          <Card className="bg-blue-100 border-blue-300">
-            <CardHeader>
-              <CardTitle className="text-blue-800">Xi'an Jiaotong University, Xi'an, Shaanxi, China</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-blue-900">
-                Bachelor of Management (Sep 2020 - Jul 2024)<br />
-                Major: Big Data Management and Application<br />
-                GPA: 2.92<br />
-                Main Subjects: Python, Data Analysis, Statistics, Machine Learning, E-commerce
-              </p>
-            </CardContent>
-          </Card>
-        </section>
+                        <section className="mb-12">
+                            <h2 className="text-2xl font-semibold mb-4 text-blue-700">Projects & Experience</h2>
+                            <div className="relative bg-blue-100 border border-blue-300 rounded-lg p-6">
+                                <h3 className="text-xl font-semibold mb-2 text-blue-800">{projectsData[currentProject].title}</h3>
+                                <p className="text-blue-900 mb-4">{projectsData[currentProject].description}</p>
+                                <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                                    View Details
+                                </button>
+                                <button 
+                                    className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-blue-200 text-blue-600 p-2 rounded-full hover:bg-blue-300"
+                                    onClick={prevProject}
+                                >
+                                    &#8249;
+                                </button>
+                                <button 
+                                    className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-blue-200 text-blue-600 p-2 rounded-full hover:bg-blue-300"
+                                    onClick={nextProject}
+                                >
+                                    &#8250;
+                                </button>
+                            </div>
+                        </section>
 
-        <section>
-          <h2 className="text-2xl font-semibold mb-4 text-blue-700">Contact</h2>
-          <p className="text-blue-900">
-            Email: koobenghe@gmail.com<br />
-            Phone: +601135623297<br />
-            Location: Malaysia<br />
-            JobStreet Profile: <a href="https://www.jobstreet.com.my/profile/benghe-koo-N8FtqrBJ3Y" className="text-blue-600 hover:underline">Beng He Koo</a>
-          </p>
-        </section>
-      </main>
-    </div>
-  );
-};
+                        <section className="mb-12">
+                            <h2 className="text-2xl font-semibold mb-4 text-blue-700">Education</h2>
+                            <div className="bg-blue-100 border border-blue-300 rounded-lg p-6">
+                                <h3 className="text-xl font-semibold mb-2 text-blue-800">Xi'an Jiaotong University, Xi'an, Shaanxi, China</h3>
+                                <p className="text-blue-900">
+                                    Bachelor of Management (Sep 2020 - Jul 2024)<br />
+                                    Major: Big Data Management and Application<br />
+                                    GPA: 2.92<br />
+                                    Main Subjects: Python, Data Analysis, Statistics, Machine Learning, E-commerce
+                                </p>
+                            </div>
+                        </section>
 
-export default Portfolio;
+                        <section>
+                            <h2 className="text-2xl font-semibold mb-4 text-blue-700">Contact</h2>
+                            <p className="text-blue-900">
+                                Email: koobenghe@gmail.com<br />
+                                Phone: +601135623297<br />
+                                Location: Malaysia<br />
+                                JobStreet Profile: <a href="https://www.jobstreet.com.my/profile/benghe-koo-N8FtqrBJ3Y" className="text-blue-600 hover:underline">Beng He Koo</a>
+                            </p>
+                        </section>
+                    </main>
+                </div>
+            );
+        };
+
+        ReactDOM.render(<Portfolio />, document.getElementById('root'));
+    </script>
+</body>
+</html>
