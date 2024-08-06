@@ -1,92 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Beng He Koo</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beng He Koo - Aspiring Data Analyst Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
         <h1>Beng He Koo</h1>
         <p>Aspiring Data Analyst</p>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#resume">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="home">
-        <img src="KooBengHe.jpg" alt="Profile Picture">
-        <h2>Welcome to My Portfolio</h2>
-        <p>Hi, I'm Beng He Koo, a recent graduate with a passion for data analysis. Explore my projects, skills, and experiences.</p>
-        <a href="resume.pdf" class="button">Download Resume</a>
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Enthusiastic and highly motivated fresh graduate with a degree in Big Data. I am passionate about diving deep into data to uncover insights that drive business growth and profitability. I am eager to learn and handle pressure well. I aspire to become a data scientist who effectively utilizes data to drive business growth and profitability.</p>
-        <h3>Education</h3>
-        <p>Xi'an Jiaotong University, Xi'an, Shaanxi, China (Sep 2020 - Jul 2024)<br>Bachelor of Management in Big Data Management and Application<br>Main Subjects: Python, Data Analysis, Statistics, Machine Learning, E-commerce<br>GPA: 2.92</p>
-        <h3>Skills</h3>
+      </div>
+      <nav class="nav">
         <ul>
-            <li>Microsoft Power BI</li>
-            <li>Python</li>
-            <li>MySQL</li>
-            <li>Data Analysis, Modeling, Visualization</li>
-            <li>Academic Research</li>
-            <li>Microsoft Office</li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="resume.pdf" class="btn" target="_blank">Resume</a></li>
         </ul>
-    </section>
+      </nav>
+    </div>
+  </header>
 
-    <section id="projects">
-        <h2>Projects</h2>
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Enthusiastic and highly motivated fresh graduate with a degree in Big Data. I am passionate about diving deep into data to uncover insights that drive business growth and profitability. I am eager to learn and handle pressure well. I aspire to become a data scientist who effectively utilizes data to drive business growth and profitability.</p>
+    </div>
+  </section>
+
+  <section id="skills" class="section bg-light">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span>Microsoft Power BI</span>
+        <span>Python</span>
+        <span>MySQL</span>
+        <span>Data Analysis</span>
+        <span>Data Modeling</span>
+        <span>Data Visualization</span>
+        <span>Academic Research</span>
+        <span>Microsoft Office</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects">
         <div class="project">
-            <h3>Final Year Project: Research on the Impact of Internet Influencer's Evaluation on Consumer Satisfaction</h3>
-            <p>Conducted research and wrote an article exploring how online influencer reviews affect consumer perceptions and satisfaction. Analyzed data to identify trends and insights, showcasing strong research and analytical skills.</p>
+          <h3>Final Year Project: Research on the Impact of Internet Influencer's Evaluation on Consumer Satisfaction</h3>
+          <p>Conducted research and analyzed data to identify trends and insights on how online influencer reviews affect consumer perceptions and satisfaction.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="experience">
-            <h3>Data Analyst Intern at TRS INFORMATION TECHNOLOGY Co Ltd</h3>
-            <p><strong>Duration:</strong> Jun 2023 - Aug 2023</p>
-            <ul>
-                <li>Filtered and cleaned data, resulting in a reduction in data errors to ensure subsequent analyses were based on reliable and accurate data.</li>
-                <li>Analyzed data to identify trends, patterns, and relationships, increasing data integration efficiency and providing actionable insights for strategic decision-making.</li>
-                <li>Created visualizations and reports using BI tools, transforming complex data into easy-to-understand formats, and facilitating increased management engagement and understanding of data insights.</li>
-            </ul>
-        </div>
-    </section>
+  <section id="experience" class="section bg-light">
+    <div class="container">
+      <h2>Experience</h2>
+      <div class="experience">
+        <h3>Data Analyst Intern at TRS INFORMATION TECHNOLOGY Co Ltd</h3>
+        <p><strong>Duration:</strong> Jun 2023 - Aug 2023</p>
+        <ul>
+          <li>Filtered and cleaned data, ensuring reliable and accurate analyses.</li>
+          <li>Analyzed data to identify trends, patterns, and relationships.</li>
+          <li>Created visualizations and reports using BI tools to facilitate management engagement and decision-making.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="mailto:koobenghe@gmail.com" method="post" enctype="text/plain">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message"></textarea>
-            <input type="submit" value="Send">
-        </form>
-        <p>Connect with me on <a href="https://www.linkedin.com/in/benghe-koo-N8FtqrBJ3Y">LinkedIn</a> and <a href="https://github.com/yourusername">GitHub</a>.</p>
-    </section>
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <form action="mailto:koobenghe@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea>
+        <input type="submit" value="Send">
+      </form>
+      <div class="social-links">
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        <a href="mailto:koobenghe@gmail.com">Email</a>
+      </div>
+    </div>
+  </section>
 
-    <section id="resume">
-        <h2>Resume</h2>
-        <a href="KooBengHe_Resume.pdf" class="button">Download Resume</a>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Beng He Koo. All rights reserved.</p>
-    </footer>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Beng He Koo. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
